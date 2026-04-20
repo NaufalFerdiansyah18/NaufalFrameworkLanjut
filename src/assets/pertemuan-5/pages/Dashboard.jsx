@@ -12,7 +12,9 @@ const STATS = [
 export default function Dashboard() {
   return (
     <div className="flex flex-col w-full">
-      <PageHeader />
+      <PageHeader title="Dashboard" breadcrumb={["Dashboard"]}>
+        <span />
+      </PageHeader>
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

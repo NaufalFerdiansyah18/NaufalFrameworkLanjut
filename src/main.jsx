@@ -1,18 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { BrowserRouter } from "react-router-dom";
 import Sidebar from "./assets/pertemuan-5/layouts/Sidebar";
-import Header from "./assets/pertemuan-5/layouts/Header";
-import Dashboard from "./assets/pertemuan-5/pages/Dashboard";
+import App from "./App.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <div className="bg-[#f3f4f6] min-h-screen flex font-poppins text-gray-800">
-      <Sidebar />
-      <div className="flex-1 p-8 overflow-y-auto">
-        <Header />
-        <Dashboard />
+    <BrowserRouter>
+      <div className="bg-[#f3f4f6] min-h-screen flex font-poppins text-gray-800">
+        <Sidebar />
+        <div className="flex-1 p-8 overflow-y-auto">
+          <App />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   </React.StrictMode>
 );

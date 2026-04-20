@@ -1,4 +1,13 @@
-import { FaHome, FaShoppingCart, FaUserFriends, FaPlus } from "react-icons/fa";
+import { FaShoppingCart, FaUserFriends, FaPlus, FaExclamationTriangle, FaLock, FaBan } from "react-icons/fa";
+import { MdSpaceDashboard } from "react-icons/md";
+import { NavLink } from "react-router-dom";
+
+const menuClass = ({ isActive }) =>
+  `flex cursor-pointer items-center rounded-xl p-4 space-x-2 ${
+    isActive
+      ? "text-hijau bg-green-200 font-extrabold"
+      : "text-gray-600 hover:text-hijau hover:bg-green-200 hover:font-extrabold"
+  }`;
 
 export default function Sidebar() {
   return (
@@ -18,22 +27,45 @@ export default function Sidebar() {
       <nav className="flex-1">
         <ul className="space-y-1">
           <li>
-            <div className="flex items-center gap-3 px-3 py-3 rounded-xl cursor-pointer bg-[#00B074]/10 text-[#00B074] font-semibold text-sm">
-              <FaHome className="text-base shrink-0" />
-              <span>Dashboard</span>
-            </div>
+            <NavLink id="menu-1" to="/" className={menuClass}>
+              <MdSpaceDashboard className="mr-4 text-xl" />
+              Dashboard
+            </NavLink>
           </li>
           <li>
-            <div className="flex items-center gap-3 px-3 py-3 rounded-xl cursor-pointer text-gray-400 hover:text-gray-600 hover:bg-gray-50 font-semibold text-sm transition-colors">
+            <NavLink id="menu-2" to="/orders" className={menuClass}>
               <FaShoppingCart className="text-base shrink-0" />
               <span>Orders</span>
-            </div>
+            </NavLink>
           </li>
           <li>
-            <div className="flex items-center gap-3 px-3 py-3 rounded-xl cursor-pointer text-gray-400 hover:text-gray-600 hover:bg-gray-50 font-semibold text-sm transition-colors">
+            <NavLink id="menu-3" to="/customers" className={menuClass}>
               <FaUserFriends className="text-base shrink-0" />
               <span>Customers</span>
-            </div>
+            </NavLink>
+          </li>
+
+          {/* Divider */}
+          <li className="pt-3 pb-1 px-2">
+            <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Error Pages</span>
+          </li>
+          <li>
+            <NavLink id="menu-4" to="/error-400" className={menuClass}>
+              <FaExclamationTriangle className="text-base shrink-0" />
+              <span>Error 400</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink id="menu-5" to="/error-401" className={menuClass}>
+              <FaLock className="text-base shrink-0" />
+              <span>Error 401</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink id="menu-6" to="/error-403" className={menuClass}>
+              <FaBan className="text-base shrink-0" />
+              <span>Error 403</span>
+            </NavLink>
           </li>
         </ul>
       </nav>
