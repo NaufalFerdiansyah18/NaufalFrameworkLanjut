@@ -1,34 +1,33 @@
 import { useState } from "react";
-import PageHeader from "../components/PageHeader";
-import { orders as initialOrders, STATUS_CONFIG } from "../data/ordersData";
+import PageHeader from "../../components/PageHeader";
+import { customers as initialCustomers, LOYALTY_CONFIG } from "../../data/ordersData";
 
-const EMPTY_FORM = { customerName: "", status: "Pending", totalPrice: "", orderDate: "" };
+const EMPTY_FORM = { customerName: "", email: "", phone: "", loyalty: "Gold" };
 
-export default function Orders() {
-  const [data, setData] = useState(initialOrders);
+export default function Customer() {
+  const [data, setData] = useState(initialCustomers);
   const [showModal, setShowModal] = useState(false);
   const [form, setForm] = useState(EMPTY_FORM);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newOrder = {
+    const newCustomer = {
       ...form,
-      id: `#ORD-${String(data.length + 1).padStart(3, "0")}`,
-      totalPrice: Number(form.totalPrice),
+      id: `#CUS-${String(data.length + 1).padStart(3, "0")}`,
     };
-    setData([newOrder, ...data]);
+    setData([newCustomer, ...data]);
     setForm(EMPTY_FORM);
     setShowModal(false);
   };
 
   return (
     <div className="flex flex-col w-full">
-      <PageHeader title="Orders" breadcrumb={["Dashboard", "Order List"]}>
+      <PageHeader title="Customers" breadcrumb={["Dashboard", "Customer List"]}>
         <button
           onClick={() => setShowModal(true)}
           className="bg-[#00B074] text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors"
         >
-          + Add Orders
+          + Add Customer
         </button>
       </PageHeader>
 
@@ -37,29 +36,27 @@ export default function Orders() {
           <table className="w-full text-sm">
             <thead className="bg-gray-50 text-gray-500 font-semibold">
               <tr>
-                <th className="px-5 py-3 text-left">Order ID</th>
+                <th className="px-5 py-3 text-left">Customer ID</th>
                 <th className="px-5 py-3 text-left">Customer Name</th>
-                <th className="px-5 py-3 text-left">Status</th>
-                <th className="px-5 py-3 text-left">Total Price</th>
-                <th className="px-5 py-3 text-left">Order Date</th>
+                <th className="px-5 py-3 text-left">Email</th>
+                <th className="px-5 py-3 text-left">Phone</th>
+                <th className="px-5 py-3 text-left">Loyalty</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">
-              {data.map((order) => {
-                const s = STATUS_CONFIG[order.status] || {};
+              {data.map((cus) => {
+                const l = LOYALTY_CONFIG[cus.loyalty] || {};
                 return (
-                  <tr key={order.id} className="hover:bg-gray-50 transition-colors">
-                    <td className="px-5 py-3 font-mono text-gray-500">{order.id}</td>
-                    <td className="px-5 py-3 font-medium text-gray-800">{order.customerName}</td>
+                  <tr key={cus.id} className="hover:bg-gray-50 transition-colors">
+                    <td className="px-5 py-3 font-mono text-gray-500">{cus.id}</td>
+                    <td className="px-5 py-3 font-medium text-gray-800">{cus.customerName}</td>
+                    <td className="px-5 py-3 text-gray-500">{cus.email}</td>
+                    <td className="px-5 py-3 text-gray-500">{cus.phone}</td>
                     <td className="px-5 py-3">
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${s.bg} ${s.text}`}>
-                        {order.status}
+                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${l.bg} ${l.text}`}>
+                        {cus.loyalty}
                       </span>
                     </td>
-                    <td className="px-5 py-3 text-gray-700">
-                      Rp {order.totalPrice.toLocaleString("id-ID")}
-                    </td>
-                    <td className="px-5 py-3 text-gray-500">{order.orderDate}</td>
                   </tr>
                 );
               })}
@@ -72,7 +69,7 @@ export default function Orders() {
       {showModal && (
         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
           <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-md">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">Add New Order</h2>
+            <h2 className="text-xl font-bold text-gray-800 mb-4">Add New Customer</h2>
             <form onSubmit={handleSubmit} className="space-y-3">
               <div>
                 <label className="text-sm font-semibold text-gray-600">Customer Name</label>
@@ -84,34 +81,34 @@ export default function Orders() {
                 />
               </div>
               <div>
-                <label className="text-sm font-semibold text-gray-600">Status</label>
+                <label className="text-sm font-semibold text-gray-600">Email</label>
+                <input
+                  required type="email"
+                  className="w-full mt-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00B074]"
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                />
+              </div>
+              <div>
+                <label className="text-sm font-semibold text-gray-600">Phone</label>
+                <input
+                  required
+                  className="w-full mt-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00B074]"
+                  value={form.phone}
+                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                />
+              </div>
+              <div>
+                <label className="text-sm font-semibold text-gray-600">Loyalty</label>
                 <select
                   className="w-full mt-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00B074]"
-                  value={form.status}
-                  onChange={(e) => setForm({ ...form, status: e.target.value })}
+                  value={form.loyalty}
+                  onChange={(e) => setForm({ ...form, loyalty: e.target.value })}
                 >
-                  <option>Pending</option>
-                  <option>Completed</option>
-                  <option>Cancelled</option>
+                  <option>Bronze</option>
+                  <option>Silver</option>
+                  <option>Gold</option>
                 </select>
-              </div>
-              <div>
-                <label className="text-sm font-semibold text-gray-600">Total Price (Rp)</label>
-                <input
-                  required type="number" min="0"
-                  className="w-full mt-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00B074]"
-                  value={form.totalPrice}
-                  onChange={(e) => setForm({ ...form, totalPrice: e.target.value })}
-                />
-              </div>
-              <div>
-                <label className="text-sm font-semibold text-gray-600">Order Date</label>
-                <input
-                  required type="date"
-                  className="w-full mt-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00B074]"
-                  value={form.orderDate}
-                  onChange={(e) => setForm({ ...form, orderDate: e.target.value })}
-                />
               </div>
               <div className="flex gap-3 pt-2">
                 <button type="submit" className="flex-1 bg-[#00B074] text-white py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors">

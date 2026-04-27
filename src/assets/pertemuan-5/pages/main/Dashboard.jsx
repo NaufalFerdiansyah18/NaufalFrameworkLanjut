@@ -1,5 +1,5 @@
-import PageHeader from "../components/PageHeader";
-import RecentOrders from "../components/RecentOrders";
+import PageHeader from "../../components/PageHeader";
+import RecentOrders from "../../components/RecentOrders";
 import { FaShoppingCart, FaTruck, FaBan, FaDollarSign } from "react-icons/fa";
 
 const STATS = [
