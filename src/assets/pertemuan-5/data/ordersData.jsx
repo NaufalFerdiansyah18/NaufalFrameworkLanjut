@@ -1,77 +1,15 @@
 export const orders = [
-  { id: "#ORD-001", customerName: "Budi Santoso",    status: "Completed",  totalPrice: 125000,  orderDate: "2025-01-03" },
-  { id: "#ORD-002", customerName: "Siti Rahayu",     status: "Pending",    totalPrice: 87000,   orderDate: "2025-01-05" },
-  { id: "#ORD-003", customerName: "Andi Wijaya",     status: "Completed",  totalPrice: 210000,  orderDate: "2025-01-07" },
-  { id: "#ORD-004", customerName: "Dewi Pertiwi",    status: "Cancelled",  totalPrice: 65000,   orderDate: "2025-01-09" },
-  { id: "#ORD-005", customerName: "Rizky Pratama",   status: "Pending",    totalPrice: 175000,  orderDate: "2025-01-11" },
-  { id: "#ORD-006", customerName: "Nurul Hidayah",   status: "Completed",  totalPrice: 98000,   orderDate: "2025-01-13" },
-  { id: "#ORD-007", customerName: "Fajar Setiawan",  status: "Completed",  totalPrice: 310000,  orderDate: "2025-01-15" },
-  { id: "#ORD-008", customerName: "Lestari Wulandari",status: "Cancelled", totalPrice: 55000,   orderDate: "2025-01-17" },
-  { id: "#ORD-009", customerName: "Hendra Gunawan",  status: "Pending",    totalPrice: 142000,  orderDate: "2025-01-19" },
-  { id: "#ORD-010", customerName: "Mega Putri",      status: "Completed",  totalPrice: 230000,  orderDate: "2025-01-21" },
-  { id: "#ORD-011", customerName: "Doni Kusuma",     status: "Completed",  totalPrice: 189000,  orderDate: "2025-01-23" },
-  { id: "#ORD-012", customerName: "Rina Marlina",    status: "Pending",    totalPrice: 76000,   orderDate: "2025-01-25" },
-  { id: "#ORD-013", customerName: "Agus Salim",      status: "Cancelled",  totalPrice: 112000,  orderDate: "2025-01-27" },
-  { id: "#ORD-014", customerName: "Yuni Astuti",     status: "Completed",  totalPrice: 265000,  orderDate: "2025-01-29" },
-  { id: "#ORD-015", customerName: "Bagas Prasetyo",  status: "Pending",    totalPrice: 93000,   orderDate: "2025-02-01" },
-  { id: "#ORD-016", customerName: "Fitri Handayani", status: "Completed",  totalPrice: 158000,  orderDate: "2025-02-03" },
-  { id: "#ORD-017", customerName: "Wahyu Nugroho",   status: "Cancelled",  totalPrice: 47000,   orderDate: "2025-02-05" },
-  { id: "#ORD-018", customerName: "Indah Permata",   status: "Completed",  totalPrice: 320000,  orderDate: "2025-02-07" },
-  { id: "#ORD-019", customerName: "Rudi Hartono",    status: "Pending",    totalPrice: 134000,  orderDate: "2025-02-09" },
-  { id: "#ORD-020", customerName: "Sari Dewi",       status: "Completed",  totalPrice: 201000,  orderDate: "2025-02-11" },
-  { id: "#ORD-021", customerName: "Tono Wibowo",     status: "Completed",  totalPrice: 88000,   orderDate: "2025-02-13" },
-  { id: "#ORD-022", customerName: "Putri Anggraini", status: "Pending",    totalPrice: 167000,  orderDate: "2025-02-15" },
-  { id: "#ORD-023", customerName: "Eko Prasetyo",    status: "Cancelled",  totalPrice: 72000,   orderDate: "2025-02-17" },
-  { id: "#ORD-024", customerName: "Nita Sari",       status: "Completed",  totalPrice: 245000,  orderDate: "2025-02-19" },
-  { id: "#ORD-025", customerName: "Bambang Susilo",  status: "Pending",    totalPrice: 119000,  orderDate: "2025-02-21" },
-  { id: "#ORD-026", customerName: "Wati Rahayu",     status: "Completed",  totalPrice: 183000,  orderDate: "2025-02-23" },
-  { id: "#ORD-027", customerName: "Joko Santoso",    status: "Cancelled",  totalPrice: 61000,   orderDate: "2025-02-25" },
-  { id: "#ORD-028", customerName: "Ayu Lestari",     status: "Completed",  totalPrice: 297000,  orderDate: "2025-02-27" },
-  { id: "#ORD-029", customerName: "Dimas Ardianto",  status: "Pending",    totalPrice: 145000,  orderDate: "2025-03-01" },
-  { id: "#ORD-030", customerName: "Rini Susanti",    status: "Completed",  totalPrice: 222000,  orderDate: "2025-03-03" },
+
 ];
 
 export const customers = [
-  { id: "#CUS-001", customerName: "Budi Santoso",     email: "budi@email.com",     phone: "081234567890", loyalty: "Gold"   },
-  { id: "#CUS-002", customerName: "Siti Rahayu",      email: "siti@email.com",     phone: "081234567891", loyalty: "Silver" },
-  { id: "#CUS-003", customerName: "Andi Wijaya",      email: "andi@email.com",     phone: "081234567892", loyalty: "Bronze" },
-  { id: "#CUS-004", customerName: "Dewi Pertiwi",     email: "dewi@email.com",     phone: "081234567893", loyalty: "Gold"   },
-  { id: "#CUS-005", customerName: "Rizky Pratama",    email: "rizky@email.com",    phone: "081234567894", loyalty: "Silver" },
-  { id: "#CUS-006", customerName: "Nurul Hidayah",    email: "nurul@email.com",    phone: "081234567895", loyalty: "Bronze" },
-  { id: "#CUS-007", customerName: "Fajar Setiawan",   email: "fajar@email.com",    phone: "081234567896", loyalty: "Gold"   },
-  { id: "#CUS-008", customerName: "Lestari Wulandari",email: "lestari@email.com",  phone: "081234567897", loyalty: "Silver" },
-  { id: "#CUS-009", customerName: "Hendra Gunawan",   email: "hendra@email.com",   phone: "081234567898", loyalty: "Bronze" },
-  { id: "#CUS-010", customerName: "Mega Putri",       email: "mega@email.com",     phone: "081234567899", loyalty: "Gold"   },
-  { id: "#CUS-011", customerName: "Doni Kusuma",      email: "doni@email.com",     phone: "082234567890", loyalty: "Silver" },
-  { id: "#CUS-012", customerName: "Rina Marlina",     email: "rina@email.com",     phone: "082234567891", loyalty: "Bronze" },
-  { id: "#CUS-013", customerName: "Agus Salim",       email: "agus@email.com",     phone: "082234567892", loyalty: "Gold"   },
-  { id: "#CUS-014", customerName: "Yuni Astuti",      email: "yuni@email.com",     phone: "082234567893", loyalty: "Silver" },
-  { id: "#CUS-015", customerName: "Bagas Prasetyo",   email: "bagas@email.com",    phone: "082234567894", loyalty: "Bronze" },
-  { id: "#CUS-016", customerName: "Fitri Handayani",  email: "fitri@email.com",    phone: "082234567895", loyalty: "Gold"   },
-  { id: "#CUS-017", customerName: "Wahyu Nugroho",    email: "wahyu@email.com",    phone: "082234567896", loyalty: "Silver" },
-  { id: "#CUS-018", customerName: "Indah Permata",    email: "indah@email.com",    phone: "082234567897", loyalty: "Bronze" },
-  { id: "#CUS-019", customerName: "Rudi Hartono",     email: "rudi@email.com",     phone: "082234567898", loyalty: "Gold"   },
-  { id: "#CUS-020", customerName: "Sari Dewi",        email: "sari@email.com",     phone: "082234567899", loyalty: "Silver" },
-  { id: "#CUS-021", customerName: "Tono Wibowo",      email: "tono@email.com",     phone: "083234567890", loyalty: "Bronze" },
-  { id: "#CUS-022", customerName: "Putri Anggraini",  email: "putri@email.com",    phone: "083234567891", loyalty: "Gold"   },
-  { id: "#CUS-023", customerName: "Eko Prasetyo",     email: "eko@email.com",      phone: "083234567892", loyalty: "Silver" },
-  { id: "#CUS-024", customerName: "Nita Sari",        email: "nita@email.com",     phone: "083234567893", loyalty: "Bronze" },
-  { id: "#CUS-025", customerName: "Bambang Susilo",   email: "bambang@email.com",  phone: "083234567894", loyalty: "Gold"   },
-  { id: "#CUS-026", customerName: "Wati Rahayu",      email: "wati@email.com",     phone: "083234567895", loyalty: "Silver" },
-  { id: "#CUS-027", customerName: "Joko Santoso",     email: "joko@email.com",     phone: "083234567896", loyalty: "Bronze" },
-  { id: "#CUS-028", customerName: "Ayu Lestari",      email: "ayu@email.com",      phone: "083234567897", loyalty: "Gold"   },
-  { id: "#CUS-029", customerName: "Dimas Ardianto",   email: "dimas@email.com",    phone: "083234567898", loyalty: "Silver" },
-  { id: "#CUS-030", customerName: "Rini Susanti",     email: "rini@email.com",     phone: "083234567899", loyalty: "Bronze" },
+  
 ];
 
 export const STATUS_CONFIG = {
-  Completed: { label: "Completed", bg: "bg-[#00B074]/10", text: "text-[#00B074]" },
-  Pending:   { label: "Pending",   bg: "bg-yellow-50",    text: "text-yellow-500" },
-  Cancelled: { label: "Cancelled", bg: "bg-red-50",       text: "text-red-500"   },
+ 
 };
 
 export const LOYALTY_CONFIG = {
-  Gold:   { bg: "bg-yellow-50",  text: "text-yellow-600" },
-  Silver: { bg: "bg-gray-100",   text: "text-gray-500"   },
-  Bronze: { bg: "bg-orange-50",  text: "text-orange-500" },
+
 };
