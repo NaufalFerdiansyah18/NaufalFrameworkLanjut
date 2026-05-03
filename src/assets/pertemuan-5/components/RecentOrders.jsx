@@ -9,7 +9,7 @@ export default function RecentOrders() {
           <h2 className="text-base font-bold text-gray-800 font-poppins">Pesanan Terkini</h2>
           <p className="text-xs text-gray-400 font-barlow mt-0.5">Aktivitas pesanan hari ini</p>
         </div>
-        <button className="text-xs font-bold text-[#00B074] hover:underline cursor-pointer">
+        <button className="text-xs font-bold text-[#1A7C6E] hover:underline cursor-pointer">
           Lihat Semua →
         </button>
       </div>

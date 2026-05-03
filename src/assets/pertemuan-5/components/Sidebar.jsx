@@ -1,26 +1,29 @@
-import { FaShoppingCart, FaUserFriends, FaPlus, FaExclamationTriangle, FaLock, FaBan } from "react-icons/fa";
+import { FaShoppingCart, FaUserFriends, FaPlus, FaExclamationTriangle, FaLock, FaBan, FaTooth } from "react-icons/fa";
 import { MdSpaceDashboard } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 const menuClass = ({ isActive }) =>
   `flex cursor-pointer items-center rounded-xl p-4 space-x-2 ${
     isActive
-      ? "text-hijau bg-green-200 font-extrabold"
-      : "text-gray-600 hover:text-hijau hover:bg-green-200 hover:font-extrabold"
+      ? "text-[#2BB5A0] bg-[#E8F8F6] font-extrabold"
+      : "text-gray-500 hover:text-[#2BB5A0] hover:bg-[#E8F8F6] hover:font-extrabold"
   }`;
 
 export default function Sidebar() {
   return (
     <div className="flex flex-col w-64 min-h-screen bg-white border-r border-gray-100 py-8 px-6">
-      
+
       {/* Logo */}
-      <div className="mb-10">
-        <span className="block text-[36px] font-[900] text-gray-900 leading-none tracking-tight font-poppins">
-          Sedap<b className="text-[#00B074]">.</b>
-        </span>
-        <span className="block text-[11px] font-semibold text-gray-400 mt-1 tracking-wide uppercase font-barlow">
-          Modern Admin Dashboard
-        </span>
+      <div className="mb-10 flex items-center gap-2.5">
+        <FaTooth className="text-[32px] text-[#2BB5A0] -scale-x-100" />
+        <div>
+          <span className="block text-[22px] font-[800] text-gray-900 leading-none tracking-tight font-poppins">
+            Dentiva
+          </span>
+          <span className="block text-[9px] font-semibold text-gray-400 mt-0.5 tracking-widest uppercase font-barlow">
+            DENTAL CLINIC SYSTEM
+          </span>
+        </div>
       </div>
 
       {/* Menu */}
@@ -72,10 +75,10 @@ export default function Sidebar() {
 
       {/* Footer Banner */}
       <div className="mt-8">
-        <div className="bg-[#00B074] rounded-2xl p-4 mb-6 relative overflow-hidden">
+        <div className="bg-[#2BB5A0] rounded-2xl p-4 mb-6 relative overflow-hidden">
           {/* Decorative circle */}
           <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-white/10" />
-          
+
           {/* Avatar */}
           <div className="flex justify-end mb-2">
             <img
@@ -95,10 +98,10 @@ export default function Sidebar() {
         </div>
 
         <div className="px-1">
-          <p className="font-bold text-gray-400 text-[11px] leading-snug">
-            Sedap Restaurant Admin Dashboard
+          <p className="font-bold text-[#2BB5A0] text-[11px] leading-snug">
+            Dentiva Dental Clinic
           </p>
-          <p className="text-gray-300 text-[11px] mt-0.5">
+          <p className="text-gray-400 text-[11px] mt-0.5">
             © 2025 All Right Reserved
           </p>
         </div>

@@ -25,7 +25,7 @@
         <p className="text-gray-400 mt-2 max-w-sm">{description}</p>
         <a
           href="/"
-          className="mt-6 px-6 py-2 bg-[#00B074] text-white rounded-xl font-semibold hover:bg-green-600 transition-colors"
+          className="mt-6 px-6 py-2 bg-[#1A7C6E] text-white rounded-xl font-semibold hover:bg-[#15675C] transition-colors"
         >
           Kembali ke Dashboard
         </a>

@@ -28,7 +28,7 @@ export default function Forgot() {
                 </div>
                 <button
                     type="submit"
-                    className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4
+                    className="w-full bg-[#1A7C6E] hover:bg-[#15675C] text-white font-semibold py-2 px-4
                         rounded-lg transition duration-300"
                 >
                     Send Reset Link

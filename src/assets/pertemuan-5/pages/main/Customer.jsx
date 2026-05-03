@@ -25,7 +25,7 @@ export default function Customer() {
       <PageHeader title="Customers" breadcrumb={["Dashboard", "Customer List"]}>
         <button
           onClick={() => setShowModal(true)}
-          className="bg-[#00B074] text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors"
+          className="bg-[#1A7C6E] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#15675C] transition-colors"
         >
           + Add Customer
         </button>
@@ -75,7 +75,7 @@ export default function Customer() {
                 <label className="text-sm font-semibold text-gray-600">Customer Name</label>
                 <input
                   required
-                  className="w-full mt-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00B074]"
+                  className="w-full mt-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A7C6E]"
                   value={form.customerName}
                   onChange={(e) => setForm({ ...form, customerName: e.target.value })}
                 />
@@ -84,7 +84,7 @@ export default function Customer() {
                 <label className="text-sm font-semibold text-gray-600">Email</label>
                 <input
                   required type="email"
-                  className="w-full mt-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00B074]"
+                  className="w-full mt-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A7C6E]"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                 />
@@ -93,7 +93,7 @@ export default function Customer() {
                 <label className="text-sm font-semibold text-gray-600">Phone</label>
                 <input
                   required
-                  className="w-full mt-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00B074]"
+                  className="w-full mt-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A7C6E]"
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 />
@@ -101,7 +101,7 @@ export default function Customer() {
               <div>
                 <label className="text-sm font-semibold text-gray-600">Loyalty</label>
                 <select
-                  className="w-full mt-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00B074]"
+                  className="w-full mt-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A7C6E]"
                   value={form.loyalty}
                   onChange={(e) => setForm({ ...form, loyalty: e.target.value })}
                 >
@@ -111,7 +111,7 @@ export default function Customer() {
                 </select>
               </div>
               <div className="flex gap-3 pt-2">
-                <button type="submit" className="flex-1 bg-[#00B074] text-white py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors">
+                <button type="submit" className="flex-1 bg-[#1A7C6E] text-white py-2 rounded-lg font-semibold hover:bg-[#15675C] transition-colors">
                   Save
                 </button>
                 <button type="button" onClick={() => setShowModal(false)} className="flex-1 border border-gray-200 text-gray-600 py-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors">

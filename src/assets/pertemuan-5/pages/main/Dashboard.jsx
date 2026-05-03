@@ -3,10 +3,10 @@ import RecentOrders from "../../components/RecentOrders";
 import { FaShoppingCart, FaTruck, FaBan, FaDollarSign } from "react-icons/fa";
 
 const STATS = [
-  { id: "orders",    icon: FaShoppingCart, value: "75",      label: "Total Orders",    bg: "bg-[#00B074]", shadow: "shadow-[#00B074]/30" },
-  { id: "delivered", icon: FaTruck,        value: "175",     label: "Total Delivered", bg: "bg-[#3b82f6]", shadow: "shadow-blue-500/30" },
-  { id: "canceled",  icon: FaBan,          value: "40",      label: "Total Canceled",  bg: "bg-[#ef4444]", shadow: "shadow-red-500/30" },
-  { id: "revenue",   icon: FaDollarSign,   value: "Rp.128",  label: "Total Revenue",   bg: "bg-[#f59e0b]", shadow: "shadow-yellow-500/30" },
+  { id: "orders",    icon: FaShoppingCart, value: "75",      label: "Total Orders",    bg: "bg-[#EC4899]", shadow: "shadow-pink-500/30" },
+  { id: "delivered", icon: FaTruck,        value: "175",     label: "Total Delivered", bg: "bg-[#1A7C6E]", shadow: "shadow-[#1A7C6E]/30" },
+  { id: "canceled",  icon: FaBan,          value: "40",      label: "Total Canceled",  bg: "bg-[#8B5CF6]", shadow: "shadow-violet-500/30" },
+  { id: "revenue",   icon: FaDollarSign,   value: "Rp.128",  label: "Total Revenue",   bg: "bg-[#1A7C6E]", shadow: "shadow-[#1A7C6E]/30" },
 ];
 
 export default function Dashboard() {
