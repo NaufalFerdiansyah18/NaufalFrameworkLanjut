@@ -18,6 +18,11 @@ import React, { Suspense } from "react";
 const Dashboard = React.lazy(() => import("./assets/pertemuan-5/pages/main/Dashboard"))
 const Orders = React.lazy(() => import("./assets/pertemuan-5/pages/main/Orders"))
 const Customer = React.lazy(() => import("./assets/pertemuan-5/pages/main/Customer"))
+const CustomerDetail = React.lazy(() => import("./assets/pertemuan-5/pages/main/CustomerDetail"))
+const Produk = React.lazy(() => import("./assets/pertemuan-5/pages/main/Produk"))
+const ProdukDetail = React.lazy(() => import("./assets/pertemuan-5/pages/main/ProdukDetail"))
+const Products = React.lazy(() => import("./assets/pertemuan-5/pages/main/Products"))
+const ProductDetail = React.lazy(() => import("./assets/pertemuan-5/pages/main/ProductDetail"))
 const NotFound = React.lazy(() => import("./assets/pertemuan-5/pages/main/NotFound"))
 const Error400 = React.lazy(() => import("./assets/pertemuan-5/pages/main/Error400"))
 const Error401 = React.lazy(() => import("./assets/pertemuan-5/pages/main/Error401"))
@@ -44,6 +49,11 @@ function App() {
             <Route path="/" element={<Dashboard />} />
       <Route path="/orders" element={<Orders />} />
       <Route path="/customers" element={<Customer />} />
+      <Route path="/customers/:id" element={<CustomerDetail />} />
+      <Route path="/produk" element={<Produk />} />
+      <Route path="/produk/:id" element={<ProdukDetail />} />
+      <Route path="/products" element={<Products />} />
+      <Route path="/products/:id" element={<ProductDetail />} />
       <Route path="/error-400" element={<Error400 />} />
       <Route path="/error-401" element={<Error401 />} />
       <Route path="/error-403" element={<Error403 />} />

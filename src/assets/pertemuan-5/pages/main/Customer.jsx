@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import PageHeader from "../../components/PageHeader";
 import { customers as initialCustomers, LOYALTY_CONFIG } from "../../data/ordersData";
 
@@ -49,7 +50,14 @@ export default function Customer() {
                 return (
                   <tr key={cus.id} className="hover:bg-gray-50 transition-colors">
                     <td className="px-5 py-3 font-mono text-gray-500">{cus.id}</td>
-                    <td className="px-5 py-3 font-medium text-gray-800">{cus.customerName}</td>
+                    <td className="px-5 py-3 font-medium text-gray-800">
+                      <Link
+                        to={`/customers/${cus.id}`}
+                        className="text-[#00B074] hover:underline font-semibold"
+                      >
+                        {cus.customerName}
+                      </Link>
+                    </td>
                     <td className="px-5 py-3 text-gray-500">{cus.email}</td>
                     <td className="px-5 py-3 text-gray-500">{cus.phone}</td>
                     <td className="px-5 py-3">
