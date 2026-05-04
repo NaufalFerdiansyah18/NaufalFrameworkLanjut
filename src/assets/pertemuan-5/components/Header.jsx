@@ -135,7 +135,7 @@ export default function Header() {
                 <div className="flex items-center gap-3 cursor-pointer">
                     <div className="text-right">
                         <p className="text-[10px] text-gray-400 font-medium leading-none mb-0.5">Hello,</p>
-                        <p className="text-sm font-bold text-gray-800 leading-tight">Fikri Muhaffizh</p>
+                        <p className="text-sm font-bold text-gray-800 leading-tight">Naufal Ferdiansyah Putra</p>
                     </div>
                     <img
                         src="https://avatar.iran.liara.run/public/boy?username=Fikri"
