@@ -12,6 +12,7 @@ import AuthLayout from "./assets/pertemuan-5/layouts/AuthLayouth";
 // import Register from "./assets/pertemuan-5/pages/auth/Register";
 // import Forgot from "./assets/pertemuan-5/pages/auth/Forgot";
 import React, { Suspense } from "react";
+
 // import Loading from "./assets/pertemuan-5/components/Loading";
 
 
@@ -27,6 +28,8 @@ const NotFound = React.lazy(() => import("./assets/pertemuan-5/pages/main/NotFou
 const Error400 = React.lazy(() => import("./assets/pertemuan-5/pages/main/Error400"))
 const Error401 = React.lazy(() => import("./assets/pertemuan-5/pages/main/Error401"))
 const Error403 = React.lazy(() => import("./assets/pertemuan-5/pages/main/Error403"))
+const Components = React.lazy(() => import("./assets/pertemuan-5/pages/main/Components"))
+
 
 
 const Register = React.lazy(() => import("./assets/pertemuan-5/pages/auth/Register"))
@@ -57,6 +60,8 @@ function App() {
       <Route path="/error-400" element={<Error400 />} />
       <Route path="/error-401" element={<Error401 />} />
       <Route path="/error-403" element={<Error403 />} />
+      <Route path="/components" element={<Components />} />
+      
       <Route path="*" element={<NotFound />} />
       </Route>
        <Route element={<AuthLayout/>}>

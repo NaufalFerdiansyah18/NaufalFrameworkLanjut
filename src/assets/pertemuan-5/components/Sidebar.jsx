@@ -56,6 +56,10 @@ export default function Sidebar() {
               <span>Products</span>
             </NavLink>
           </li>
+            <NavLink id="menu-5" to="/Components" className={menuClass}>
+              <FaBoxOpen className="text-base shrink-0" />
+              <span>Components</span>
+            </NavLink>
 
           {/* Divider */}
           <li className="pt-3 pb-1 px-2">
